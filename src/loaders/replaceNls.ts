@@ -12,10 +12,20 @@ const replaceNls: PitchLoaderDefinitionFunction<MonacoEditorI18nPlugin.IMonacoEd
 
     let _content = fs.readFileSync(nls, { encoding: "utf8" });
 
-    // use user custom locale file path
-    const { customLocalePath } = this.getOptions() || {};
-    if (customLocalePath && _content.includes("monaco-editor-i18n-plugin")) {
-        _content = _content.replace(/require\("[^"]*"\);/g, `require("${customLocalePath}");`);
+    if (_content.includes("monaco-editor-i18n-plugin")) {
+        // use locale or customLocalePath
+        const { locale, customLocalePath } = this.getOptions() || {};
+
+        let filePath = "monaco-editor-i18n-plugin/out/locale/dt-zh-hans.json";
+        if (customLocalePath) {
+            filePath = customLocalePath;
+        } else if (locale === "zh-hans") {
+            filePath = "monaco-editor-i18n-plugin/out/locale/zh-hans.json";
+        } else {
+            // locale default value is dt-zh-hans
+            filePath = "monaco-editor-i18n-plugin/out/locale/dt-zh-hans.json";
+        }
+        _content = _content.replace(/require\("[^"]*"\);/g, `require("${filePath}");`);
     }
 
     return _content;

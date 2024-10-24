@@ -12,9 +12,9 @@
 
 ## 使用
 
-### 简体中文
+### 简体中文（精简版）
 
-默认的语言是简体中文，使用到的 `src/locale/dt-zh-hans.json` 是基于 [vscode-loc](https://github.com/microsoft/vscode-loc/blob/release/1.63.3/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json) 精简的。
+使用到的 `src/locale/dt-zh-hans.json` 是基于 [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/release/1.63.3/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json) 精简的。
 
 -   `ko.config.js` [ko - Project toolkit for React Applications](https://github.com/DTStack/ko)
 
@@ -48,14 +48,31 @@ module.exports = {
 };
 ```
 
+或
+
+```js
+new MonacoEditorI18nPlugin({
+    locale: "dt-zh-hans",
+});
+```
+
+### 简体中文
+
+使用到的 `src/locale/zh-hans.json` 来源为 [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/release/1.63.3/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json)。
+
+```js
+new MonacoEditorI18nPlugin({
+    locale: "zh-hans",
+});
+```
+
 ### 自定义语言
 
 如果你想使用其他语言或者精简后的 `src/locale/dt-zh-hans.json` 文件不能满足要求，你可以在 [vscode-loc/i18n](https://github.com/microsoft/vscode-loc/tree/release/1.63.3/i18n) 找到其他语言的 JSON 文件。
 
 ```js
 new MonacoEditorI18nPlugin({
-    locale: "zh-hant", // 繁体中文
-    customLocalePath: path.join(__dirname, "./zh-hant.json"),
+    customLocalePath: path.join(__dirname, "./zh-hant.json"), // 繁体中文
 });
 ```
 

@@ -11,9 +11,9 @@ const replaceLocalizeLoader = require.resolve("./loaders/replaceLocalize");
 export declare namespace MonacoEditorI18nPlugin {
     interface IMonacoEditorI18nPluginOpts {
         /**
-         * default is zh-cn
+         * default is dt-zh-hans
          */
-        locale: "zh-cn";
+        locale?: "dt-zh-hans" | "zh-hans";
 
         /**
          * custom locale file path
@@ -56,8 +56,7 @@ function addCompilerRules(compiler: webpack.Compiler, rules: webpack.RuleSetRule
 
 class MonacoEditorI18nPlugin {
     options: MonacoEditorI18nPlugin.IMonacoEditorI18nPluginOpts = {
-        locale: "zh-cn",
-        customLocalePath: "",
+        locale: "dt-zh-hans",
     };
 
     constructor(options: MonacoEditorI18nPlugin.IMonacoEditorI18nPluginOpts) {

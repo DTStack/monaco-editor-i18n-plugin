@@ -12,9 +12,9 @@ The purpose of this plugin is to set the language when using `monaco-editor`. Th
 
 ## Usage
 
-### zh-hans
+### dt-zh-hans
 
-The default language is Simplified Chinese. The used `src/locale/dt-zh-hans.json` is based on [vscode-loc](https://github.com/microsoft/vscode-loc/blob/release/1.63.3/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json) lite.
+The used `src/locale/dt-zh-hans.json` is lite based on [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/release/1.63.3/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json).
 
 -   `ko.config.js` [ko - Project toolkit for React Applications](https://github.com/DTStack/ko)
 
@@ -48,14 +48,31 @@ module.exports = {
 };
 ```
 
+or
+
+```js
+new MonacoEditorI18nPlugin({
+    locale: "dt-zh-hans",
+});
+```
+
+### Simplified Chinese
+
+The used `src/locale/zh-hans.json` is from [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/release/1.63.3/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json)。
+
+```js
+new MonacoEditorI18nPlugin({
+    locale: "zh-hans",
+});
+```
+
 ### custom languages
 
 If you want to use another language or if the `src/locale/dt-zh-hans.json` doesn't meet your requirements, you can get another's JSON file from [vscode-loc/i18n](https://github.com/microsoft/vscode-loc/tree/release/1.63.3/i18n).
 
 ```js
 new MonacoEditorI18nPlugin({
-    locale: "zh-hant", // Traditional Chinese
-    customLocalePath: path.join(__dirname, "./zh-hant.json"),
+    customLocalePath: path.join(__dirname, "./zh-hant.json"), // Traditional Chinese
 });
 ```
 
