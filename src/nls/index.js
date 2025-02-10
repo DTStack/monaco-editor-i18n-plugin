@@ -20,7 +20,7 @@ function _format(message, args) {
 // replace monaco-editor/esm/vs/nls.js localize
 function localize(path, data, defaultMessage) {
     const key = typeof data === "object" ? data.key : data;
-    const _data = localeData ? localeData.contents : {};
+    const _data = localeData?.contents || {};
     let message = (_data[path] || {})[key];
     if (!message) {
         message = defaultMessage;
