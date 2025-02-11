@@ -11,24 +11,11 @@ const replaceNls: PitchLoaderDefinitionFunction<MonacoEditorI18nPlugin.IMonacoEd
     if (!pathRegExp.test(this.resourcePath)) return content;
 
     let _content = fs.readFileSync(nls, { encoding: "utf8" });
+    if (_content.includes("windowKey") && _content.includes("localStorageKey")) {
+        const { windowKey, localStorageKey } = this.getOptions() || {};
 
-    if (_content.includes("monaco-editor-i18n-plugin")) {
-        // use options' locale/customLocalePath
-        const { locale, customLocalePath } = this.getOptions() || {};
-
-        let filePath = "monaco-editor-i18n-plugin/out/locale/dt-zh-hans.json";
-        if (customLocalePath) {
-            filePath = customLocalePath;
-        } else if (locale === "zh-hans") {
-            filePath = "monaco-editor-i18n-plugin/out/locale/zh-hans.json";
-        } else if (locale === "en-US") {
-            _content = _content.replace(/require\("[^"]*"\);/g, `{};`);
-            return _content;
-        } else {
-            // locale default value is dt-zh-hans
-            filePath = "monaco-editor-i18n-plugin/out/locale/dt-zh-hans.json";
-        }
-        _content = _content.replace(/require\("[^"]*"\);/g, `require("${filePath}");`);
+        _content = _content.replace(/const windowKey = \("[^"]*"\);/g, `${windowKey};`);
+        _content = _content.replace(/const localStorageKey = \("[^"]*"\);/g, `${localStorageKey};`);
     }
 
     return _content;
