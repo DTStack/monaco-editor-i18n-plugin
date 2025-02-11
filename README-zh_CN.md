@@ -29,7 +29,9 @@ const plugin = [
         opts: {
             name: 'MonacoEditorI18nPlugin',
             fn: () => {
-                return new MonacoEditorI18nPlugin();
+                return new MonacoEditorI18nPlugin({
+                    locale: "dt-zh-hans",
+                });
             },
         },
     }
@@ -43,17 +45,13 @@ const MonacoEditorI18nPlugin = require('monaco-editor-i18n-plugin');
 
 module.exports = {
     ...,
-    plugins: [new MonacoEditorI18nPlugin()],
+    plugins: [
+        new MonacoEditorI18nPlugin({
+            locale: "dt-zh-hans",
+        })
+    ],
     ...,
 };
-```
-
-或
-
-```js
-new MonacoEditorI18nPlugin({
-    locale: "dt-zh-hans",
-});
 ```
 
 ### 简体中文

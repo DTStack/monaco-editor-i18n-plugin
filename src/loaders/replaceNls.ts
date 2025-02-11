@@ -13,7 +13,7 @@ const replaceNls: PitchLoaderDefinitionFunction<MonacoEditorI18nPlugin.IMonacoEd
     let _content = fs.readFileSync(nls, { encoding: "utf8" });
 
     if (_content.includes("monaco-editor-i18n-plugin")) {
-        // use locale or customLocalePath
+        // use options' locale/customLocalePath
         const { locale, customLocalePath } = this.getOptions() || {};
 
         let filePath = "monaco-editor-i18n-plugin/out/locale/dt-zh-hans.json";
@@ -21,6 +21,9 @@ const replaceNls: PitchLoaderDefinitionFunction<MonacoEditorI18nPlugin.IMonacoEd
             filePath = customLocalePath;
         } else if (locale === "zh-hans") {
             filePath = "monaco-editor-i18n-plugin/out/locale/zh-hans.json";
+        } else if (locale === "en-US") {
+            _content = _content.replace(/require\("[^"]*"\);/g, `{};`);
+            return _content;
         } else {
             // locale default value is dt-zh-hans
             filePath = "monaco-editor-i18n-plugin/out/locale/dt-zh-hans.json";

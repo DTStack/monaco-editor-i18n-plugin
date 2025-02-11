@@ -13,7 +13,7 @@ export declare namespace MonacoEditorI18nPlugin {
         /**
          * default is dt-zh-hans
          */
-        locale?: "dt-zh-hans" | "zh-hans";
+        locale: "en-US" | "zh-hans" | "dt-zh-hans";
 
         /**
          * custom locale file path
