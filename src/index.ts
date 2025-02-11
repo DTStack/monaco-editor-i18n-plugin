@@ -11,15 +11,16 @@ const replaceLocalizeLoader = require.resolve("./loaders/replaceLocalize");
 export declare namespace MonacoEditorI18nPlugin {
     interface IMonacoEditorI18nPluginOpts {
         /**
-         * default is en-US
+         * window key which has locale data
+         * default value is '__DT_LOCALE__'
          */
-        locale: "en-US" | "zh-hans" | "dt-zh-hans";
+        windowKey: string;
 
         /**
-         * custom locale file path
-         * eg: path.join(__dirname, './zh-hant.json')
+         * get locale from localStorage
+         * default value is 'dt-locale'
          */
-        customLocalePath?: string;
+        localStorageKey: string;
     }
 }
 
@@ -56,7 +57,8 @@ function addCompilerRules(compiler: webpack.Compiler, rules: webpack.RuleSetRule
 
 class MonacoEditorI18nPlugin {
     options: MonacoEditorI18nPlugin.IMonacoEditorI18nPluginOpts = {
-        locale: "en-US",
+        windowKey: "__DT_LOCALE__",
+        localStorageKey: "dt-locale",
     };
 
     constructor(options: MonacoEditorI18nPlugin.IMonacoEditorI18nPluginOpts) {

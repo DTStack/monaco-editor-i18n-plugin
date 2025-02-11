@@ -1,8 +1,5 @@
 module.exports["localize"] = module.exports["loadMessageBundle"] = module.exports["config"] = null;
 
-// This file is condensed from vscode-loc 1.63.3
-const localeData = require("monaco-editor-i18n-plugin/out/locale/dt-zh-hans.json");
-
 // replace monaco-editor/esm/vs/nls.js _format
 function _format(message, args) {
     let result;
@@ -20,7 +17,13 @@ function _format(message, args) {
 // replace monaco-editor/esm/vs/nls.js localize
 function localize(path, data, defaultMessage) {
     const key = typeof data === "object" ? data.key : data;
-    const _data = localeData?.contents || {};
+
+    // get locale data from window object
+    const windowKey = "__DT_LOCALE__";
+    const localStorageKey = "dt-locale";
+    const locale = window.localStorage.getItem(localStorageKey) || "en-US";
+    const _data = window[windowKey]?.[locale] || {};
+
     let message = (_data[path] || {})[key];
     if (!message) {
         message = defaultMessage;
