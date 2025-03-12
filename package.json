@@ -1,6 +1,6 @@
 {
     "name": "monaco-editor-i18n-plugin",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A i18n plugin for the Monaco editor",
     "main": "out/index.js",
     "typings": "./out/index.d.ts",
