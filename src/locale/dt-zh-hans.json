@@ -205,6 +205,15 @@
             "markerAction.previous.label": "转到上一个问题 (错误、警告、信息)",
             "markerAction.previousInFiles.label": "转到文件中的上一个问题 (错误、警告、信息)"
         },
+        "vs/editor/contrib/gotoSymbol/goToCommands": {
+            "actions.goToDecl.label": "转到定义",
+            "goToReferences.label": "转到引用",
+            "peek.submenu": "快速查看",
+            "actions.previewDecl.label": "速览定义",
+            "references.action.label": "查看引用",
+            "references.no": "未找到\"{0}\"的引用",
+            "noResultWord": "未找到“{0}”的任何定义"
+        },
         "vs/editor/contrib/quickAccess/gotoLineQuickAccess": {
             "gotoLineLabelEmptyWithLimit": "当前行: {0}，字符: {1}。键入要导航到的行号(介于 1 至 {2} 之间)。"
         },
