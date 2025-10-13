@@ -6,6 +6,7 @@
 import type * as webpack from "webpack";
 
 const replaceNls = require.resolve("./loaders/replaceNls");
+const replaceNlsMessages = require.resolve("./loaders/replaceNlsMessages");
 const replaceLocalizeLoader = require.resolve("./loaders/replaceLocalize");
 
 export declare namespace MonacoEditorI18nPlugin {
@@ -34,6 +35,10 @@ function createLoaderRules(options: MonacoEditorI18nPlugin.IMonacoEditorI18nPlug
             use: [
                 {
                     loader: replaceNls,
+                    options,
+                },
+                {
+                    loader: replaceNlsMessages,
                     options,
                 },
                 {
