@@ -272,10 +272,14 @@
             "actions.goToDeclToSide.label": "打开侧边的定义",
             "goToReferences.label": "转到引用",
             "peek.submenu": "快速查看",
+			"def.title": "定义",
             "actions.previewDecl.label": "速览定义",
             "references.action.label": "查看引用",
             "references.no": "未找到\"{0}\"的引用",
             "noResultWord": "未找到“{0}”的任何定义"
+		},
+		"vs/editor/contrib/gotoSymbol/browser/peek/referencesWidget": {
+			"peekView.alternateTitle": "引用"
 		},
 		"vs/editor/contrib/readOnlyMessage/browser/contribution": {
 			"editor.readonly": "无法在只读编辑器中编辑"
