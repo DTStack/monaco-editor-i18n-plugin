@@ -9,28 +9,31 @@
 
 ## 版本差异
 
-- 0.x 版本：当你的产品只有一种界面语言时（不需要支持国际化，如仅支持中文），请使用 [0.x](https://github.com/DTStack/monaco-editor-i18n-plugin/tree/0.x-stable) 的版本。
-- 最新版本：当你的产品需要支持国际化时（产品页面支持切换界面语言），请使用最新版本。
+`2.x` 和 `1.x` 的主要区别在于 `monaco-editor` 的版本。
+
+- 2.x 版本：当你的产品需要支持国际化时（产品页面支持切换界面语言），可以使用 [2.x](https://github.com/DTStack/monaco-editor-i18n-plugin/tree/master) 的版本，已验证 monaco-editor `0.52.2` 版本。
+- 1.x 版本：当你的产品需要支持国际化时（产品页面支持切换界面语言），请使用 [1.x](https://github.com/DTStack/monaco-editor-i18n-plugin/tree/1.x-stable) 的版本，已验证 monaco-editor `0.30.1` 和 `0.31.1` 版本。
+- 0.x 版本：当你的产品只有一种界面语言时（不需要支持国际化，如仅支持中文），请使用 [0.x](https://github.com/DTStack/monaco-editor-i18n-plugin/tree/0.x-stable) 的版本，已验证 monaco-editor `0.30.1` 和 `0.31.1` 版本。
 
 
 ## 安装
 
-`npm install monaco-editor-i18n-plugin -D`
+- `npm install monaco-editor-i18n-plugin -D`
 
 
 ## 语言
 
 ### 简体中文（精简版）
 
-使用到的 `src/locale/dt-zh-hans.json` 是基于 [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/release/1.63.3/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json) 精简的。
+使用到的 `src/locale/dt-zh-hans.json` 是基于 [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/v1.96.2024121109/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json) 精简的。
 
 ### 简体中文（完整版）
 
-使用到的 `src/locale/zh-hans.json` 来源为 [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/release/1.63.3/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json)。
+使用到的 `src/locale/zh-hans.json` 来源为 [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/v1.96.2024121109/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json)。
 
 ### 自定义语言
 
-如果你想使用其他语言或者精简后的 `src/locale/dt-zh-hans.json` 文件不能满足要求，你可以在 [vscode-loc/i18n](https://github.com/microsoft/vscode-loc/tree/release/1.63.3/i18n) 找到其他语言的 JSON 文件，修改后放入你的工程文件夹下，以便使用自定义路径。
+如果你想使用其他语言或者精简后的 `src/locale/dt-zh-hans.json` 文件不能满足要求，你可以在 [vscode-loc/i18n](https://github.com/microsoft/vscode-loc/tree/v1.96.2024121109/i18n) 找到其他语言的 JSON 文件，放入你的工程文件夹下以便使用自定义路径。
 
 
 ## 使用示例
@@ -110,6 +113,6 @@ setLocale('dt-zh-hans');
 
 ## 注意事项
 
-- 目前验证的 `monaco-editor` 版本为 `0.30.1` 和 `0.31.1`。
-- 对应的 `vscode-loc` 版本为 `1.63.3`。
-- 如果自定义语言不生效，可能是上述两个包的版本没有对应，`vscode-loc` 后续版本的 JSON 文件结构是有变化的，请自行验证。
+- 目前验证的 `monaco-editor` 版本为 `0.52.2`。
+- 对应的 `vscode-loc` 版本为 `1.91.1`。
+- 如果自定义语言不生效，可能是上述两个包的版本没有对应，`vscode-loc` 不同版本的 JSON 文件结构是有变化的（如 1.63.3 和 1.91.1），其他版本请自行验证。
