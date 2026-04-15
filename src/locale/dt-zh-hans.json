@@ -127,6 +127,14 @@
 		"vs/editor/contrib/lineSelection/browser/lineSelection": {
 			"expandLineSelection": "展开行选择"
 		},
+		"vs/platform/actions/browser/toolbar": {
+			"hide": "隐藏",
+			"resetThisMenu": "重置菜单"
+		},
+		"vs/platform/actions/common/menuService": {
+			"configure keybinding": "配置键绑定",
+			"hide.label": "隐藏“{0}”"
+		},
         "vs/editor/contrib/linesOperations/browser/linesOperations": {
             "duplicateSelection": "重复选择",
 			"editor.transformToCamelcase": "转换为驼峰式大小写",
@@ -174,7 +182,49 @@
             "transposeLetters.label": "转置字母"
         },
 		"vs/editor/contrib/inlineCompletions/browser/controller/commands": {
-			"action.inlineSuggest.trigger": "触发内联建议"
+			"accept": "接受",
+			"acceptLine": "接受行",
+			"acceptWord": "接受 Word",
+			"action.inlineSuggest.accept": "接受内联建议",
+			"action.inlineSuggest.acceptNextLine": "接受内联建议的下一行",
+			"action.inlineSuggest.acceptNextWord": "接受内联建议的下一个字",
+			"action.inlineSuggest.alwaysShowToolbar": "始终显示工具栏",
+			"action.inlineSuggest.dev.extractRepro": "开发人员: 提取内联建议状态",
+			"action.inlineSuggest.hide": "隐藏内联建议",
+			"action.inlineSuggest.jump": "跳转到下一个内联编辑",
+			"action.inlineSuggest.showNext": "显示下一个内联建议",
+			"action.inlineSuggest.showPrevious": "显示上一个内联建议",
+			"action.inlineSuggest.trigger": "触发内联建议",
+			"action.inlineSuggest.trigger.explicitInlineEdit": "触发内联编辑",
+			"jump": "跳转",
+			"noInlineEditAvailable": "无内联编辑可用。",
+			"reject": "Reject"
+		},
+		"vs/editor/contrib/inlineCompletions/browser/controller/inlineCompletionContextKeys": {
+			"cursorAtInlineEdit": "光标是否处于内联编辑状态",
+			"cursorInIndentation": "光标是否处于缩进状态",
+			"editor.hasSelection": "编辑器是否有选择",
+			"inlineEditVisible": "内联编辑是否可见",
+			"inlineSuggestionHasIndentation": "内联建议是否以空白开头",
+			"inlineSuggestionHasIndentationLessThanTabSize": "内联建议是否以小于选项卡插入内容的空格开头",
+			"inlineSuggestionVisible": "内联建议是否可见",
+			"suppressSuggestions": "是否应抑制当前建议",
+			"tabShouldAcceptInlineEdit": "选项卡是否应接受内联编辑。",
+			"tabShouldJumpToInlineEdit": "选项卡是否应跳转到内联编辑。"
+		},
+		"vs/editor/contrib/inlineCompletions/browser/controller/inlineCompletionsController": {
+			"showAccessibleViewHint": "在辅助视图中检查此项 ({0})"
+		},
+		"vs/editor/contrib/inlineCompletions/browser/hintsWidget/hoverParticipant": {
+			"hoverAccessibilityStatusBar": "此处有内联完成",
+			"inlineSuggestionFollows": "建议:"
+		},
+		"vs/editor/contrib/inlineCompletions/browser/hintsWidget/inlineCompletionsHintsWidget": {
+			"content": "{0} ({1})",
+			"next": "下一步",
+			"parameterHintsNextIcon": "“显示下一个参数”提示的图标。",
+			"parameterHintsPreviousIcon": "“显示上一个参数”提示的图标。",
+			"previous": "上一步"
 		},
         "vs/editor/contrib/suggest/browser/suggestController": {
             "suggest.trigger.label": "触发建议",
