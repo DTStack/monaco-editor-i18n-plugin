@@ -1,0 +1,32 @@
+.github/workflows/CI.yml
+  d5a8989dacb32d51 15,21,23,29
+  h_98b8b691222da1 18,20,22,26,33
+tsconfig.json
+  d5a8989dacb32d51 4
+  h_98b8b691222da1 9-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "f2e01d3e9ad7842979108b44a6c22f9cb5f7db7f",
+  "prompts": {
+    "d5a8989dacb32d51": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_222283b04ffehjSgfoYX1QRlw2",
+        "model": "mimo/mimo-v2.5-pro"
+      },
+      "human_author": null,
+      "messages": [],
+      "total_additions": 13,
+      "total_deletions": 10,
+      "accepted_lines": 5,
+      "overriden_lines": 0
+    }
+  },
+  "humans": {
+    "h_98b8b691222da1": {
+      "author": "liuxy0551"
+    }
+  }
+}
