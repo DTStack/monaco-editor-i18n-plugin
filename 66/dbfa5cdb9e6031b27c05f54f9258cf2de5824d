@@ -1,0 +1,29 @@
+.github/workflows/CI.yml
+  d5a8989dacb32d51 23
+  h_98b8b691222da1 18,20-22,26,29,33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "66dbfa5cdb9e6031b27c05f54f9258cf2de5824d",
+  "prompts": {
+    "d5a8989dacb32d51": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_222283b04ffehjSgfoYX1QRlw2",
+        "model": "mimo/mimo-v2.5-pro"
+      },
+      "human_author": null,
+      "messages": [],
+      "total_additions": 3,
+      "total_deletions": 3,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  },
+  "humans": {
+    "h_98b8b691222da1": {
+      "author": "liuxy0551"
+    }
+  }
+}
