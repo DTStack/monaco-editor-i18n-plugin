@@ -326,7 +326,8 @@
             "actions.previewDecl.label": "速览定义",
             "references.action.label": "查看引用",
             "references.no": "未找到\"{0}\"的引用",
-            "noResultWord": "未找到“{0}”的任何定义"
+            "noResultWord": "未找到“{0}”的任何定义",
+			"generic.noResults": "找不到定义"
 		},
 		"vs/editor/contrib/gotoSymbol/browser/peek/referencesWidget": {
 			"peekView.alternateTitle": "引用"
