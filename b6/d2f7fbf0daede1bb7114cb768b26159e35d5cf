@@ -1,0 +1,30 @@
+package.json
+  h_98b8b691222da1 3
+src/locale/dt-zh-hans.json
+  h_98b8b691222da1 329-330
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "b6d2f7fbf0daede1bb7114cb768b26159e35d5cf",
+  "prompts": {
+    "725e8db0ce0a3876": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ddc80-6a91-7420-b388-add622688585",
+        "model": "gpt-5.5"
+      },
+      "human_author": null,
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  },
+  "humans": {
+    "h_98b8b691222da1": {
+      "author": "liuxy0551"
+    }
+  }
+}
