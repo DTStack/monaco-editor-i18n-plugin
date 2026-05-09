@@ -1,0 +1,42 @@
+package.json
+  h_3070dc1062bb3b 3,28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "e2a4ec54fae126db0979a40b658164aadd42ae2d",
+  "prompts": {
+    "70fa57d634eedb30": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6d037e57-a26c-49af-be20-89120cff95ff",
+        "model": "mimo-v2.5-pro"
+      },
+      "human_author": "liuxy0551 <liuxy0551@qq.com>",
+      "total_additions": 4,
+      "total_deletions": 2,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    },
+    "b148d7340fb17777": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8bb0536-fa89-482a-bdca-e2500068dad0",
+        "model": "mimo-v2.5-pro"
+      },
+      "human_author": "liuxy0551 <liuxy0551@qq.com>",
+      "total_additions": 16,
+      "total_deletions": 4,
+      "accepted_lines": 11,
+      "overriden_lines": 1
+    }
+  },
+  "humans": {
+    "h_3070dc1062bb3b": {
+      "author": "liuxy0551 <liuxy0551@qq.com>"
+    },
+    "h_98b8b691222da1": {
+      "author": "liuxy0551"
+    }
+  }
+}
