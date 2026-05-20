@@ -4,14 +4,15 @@
 
 English | [简体中文](./README-zh_CN.md)
 
-The purpose of this plugin is to set the interface language when using `monaco-editor`. The main implementation idea is to override the `monaco-editor/esm/vs/nls.js` file to achieve the effect of interface language switching.
+The purpose of this plugin is to set the interface language when using `monaco-editor`. The main implementation idea is to override the `monaco-editor/esm/vs/nls.messages.js` file to achieve the effect of interface language switching.
 
 
 ## Version difference
 
-The main difference between `2.x` and `1.x` lies in the version of `monaco-editor`.
+The main difference between `3.x`, `2.x` and `1.x` lies in the version of `monaco-editor`.
 
-- The 2.x: When your product needs to support internationalization (the product page supports switching interface languages), please use version [2.x](https://github.com/DTStack/monaco-editor-i18n-plugin/tree/master). It has been verified with `monaco-editor` versions `0.52.2`.
+- The 3.x: When your product needs to support internationalization (the product page supports switching interface languages), please use version [3.x](https://github.com/DTStack/monaco-editor-i18n-plugin/tree/main). It has been verified with `monaco-editor` versions `0.54.0`.
+- The 2.x: When your product needs to support internationalization (the product page supports switching interface languages), please use version [2.x](https://github.com/DTStack/monaco-editor-i18n-plugin/tree/2.x-stable). It has been verified with `monaco-editor` versions `0.52.2`.
 - The 1.x: When your product needs to support internationalization (the product page supports switching interface languages), please use version [1.x](https://github.com/DTStack/monaco-editor-i18n-plugin/tree/1.x-stable). It has been verified with `monaco-editor` versions `0.30.1` and `0.31.1`.
 - The 0.x: When your product only has one interface language (does not need to support internationalization, such as only supporting Chinese), please use version [0.x](https://github.com/DTStack/monaco-editor-i18n-plugin/tree/0.x-stable). It has been verified with `monaco-editor` versions `0.30.1` and `0.31.1`.
 
@@ -25,16 +26,16 @@ The main difference between `2.x` and `1.x` lies in the version of `monaco-edito
 
 ### dt-zh-hans (Simplified version for dtstack)
 
-The used `src/locale/dt-zh-hans.json` is lite based on [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/v1.96.2024121109/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json).
+The used `src/locale/dt-zh-hans.json` is lite based on [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/main/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json).
 
 ### Simplified Chinese (Full version)
 
-The used `src/locale/zh-hans.json` is from [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/v1.96.2024121109/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json)。
+The used `src/locale/zh-hans.json` is from [vscode-loc/i18n/zh-hans](https://github.com/microsoft/vscode-loc/blob/main/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json)。
 
 
 ### custom languages
 
-If you want to use another languages or if the simplified `src/scale/dt-zh-hans.json` file does not meet the requirements, you can find JSON files in other languages in [vscode-loc/i18n](https://github.com/microsoft/vscode-loc/tree/v1.96.2024121109/i18n), and place them in your project folder for custom path usage.
+If you want to use another languages or if the simplified `src/scale/dt-zh-hans.json` file does not meet the requirements, you can find JSON files in other languages in [vscode-loc/i18n](https://github.com/microsoft/vscode-loc/tree/main/i18n), and place them in your project folder for custom path usage.
 
 
 ## Example usage
@@ -114,6 +115,6 @@ setLocale('dt-zh-hans');
 
 ## Notice
 
--   The currently verified versions of `monaco-editor` are `0.52.2`.
--   The corresponding version of `vscode doc` is `1.91.1`.
+-   The currently verified versions of `monaco-editor` are `0.54.0`.
+-   The corresponding version of `vscode-loc` is `main`.
 -   If custom language doesn't work, it may be due to a mismatch between the versions of the two packages. The JSON file structure in later versions of `vscode-loc` has changed (like `1.63.3` and `1.91.1`), Please verify other versions yourself.
